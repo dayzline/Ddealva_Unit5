@@ -62,6 +62,5 @@ public class Target : MonoBehaviour
         {
             gameManager.GameOver();
         }
-
     }
 }

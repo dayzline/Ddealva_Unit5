@@ -10,7 +10,7 @@ public class Target : MonoBehaviour
     private const float maxTorque = 10;
     private const float minXPos = -3;
     private const float maxXPos = 3;
-    private const float ySpawnPos = -2;
+    private const float ySpawnPos = 0;
 
     private Rigidbody targetRb;
     private GameManager gameManager;
@@ -48,13 +48,20 @@ public class Target : MonoBehaviour
 
     private void OnMouseDown()
     {
-        gameManager.UpdateScore(pointValue);
-        Instantiate(hitConfirm, transform.position, hitConfirm.transform.rotation);
-        Destroy(gameObject);
-        Debug.Log("GameObject Destroyed");
+        if (gameManager.gameActive)
+        {
+            gameManager.UpdateScore(pointValue);
+            Instantiate(hitConfirm, transform.position, hitConfirm.transform.rotation);
+            Destroy(gameObject);
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
         Destroy(gameObject);
+        if (!gameObject.CompareTag("Bomb"))
+        {
+            gameManager.GameOver();
+        }
+
     }
 }

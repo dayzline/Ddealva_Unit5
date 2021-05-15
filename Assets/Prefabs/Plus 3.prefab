@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4369227357121686940}
   - component: {fileID: 3961931185981134960}
   - component: {fileID: 7440487531687226845}
+  - component: {fileID: -1514972724039680338}
   m_Layer: 0
   m_Name: Plus 3
   m_TagString: Untagged
@@ -109,3 +110,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59996ac7ccc0db34ea6923d0961490aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pointValue: 3
+  hitConfirm: {fileID: 7303472089845130122, guid: 6cbc21f5e9162483993a2b84b14d5ac8,
+    type: 3}
+--- !u!65 &-1514972724039680338
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4369227357119984930}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.26173592, y: 0.13675982, z: 0.4304055}
+  m_Center: {x: 0, y: 0.111486286, z: 0.00342983}
